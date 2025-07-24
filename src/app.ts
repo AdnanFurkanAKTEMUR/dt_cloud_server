@@ -7,15 +7,21 @@ import newsRoutes from "./routes/newsRoutes";
 import filtersRoutes from "./routes/filtersRoutes";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes";
+import swaggerUi from 'swagger-ui-express';
+import swaggerJsdoc from 'swagger-jsdoc';
+import { swaggerOptions } from './swagger/swaggerOptions';
 
 dotenv.config();
 const app = express();
+const specs = swaggerJsdoc(swaggerOptions);
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authRoutes);
