@@ -14,7 +14,7 @@ Projenin canlıda ki örneği client=https://www.adnanfurkanaktemur.com.tr, serv
 
 Proje bana iletilen dökümanda istenildiği üzere backend tarafında express.js, typescript ile yazılmıştır. Veri tabanı olarak postresql, veri önbellekleme için redis kullanıldı. Api istekleri için axios kullanıldı api isteği atılan kaynaklar ise news api ve guardian api seçildi. Bunların hepsi(backend, redis, postresql) birer docker 
 container'ı olarak aynı docker ağı içinde çalışacak şekilde tasarlandı (docker-compose.yml). 
-Frontend tarafında ise Next.js ile birlikte React.js olarak yazıldı. Backende istek atmak için bir api-context ve kullanıcı işlemleri için ise auth context yazıldı bunların detayını frontend projesinde yazıyor olacağım.
+Frontend tarafında ise Next.js ile birlikte React.js olarak yazıldı. Backende istek atmak için bir api-context ve kullanıcı işlemleri için ise auth context yazıldı.
 Backendin çalışma mantığından kısaca bahsetmek gerekirse: 
   - Ön taraftan kullanıcı giriş yapar, eğer hesabı yok ise kayıt olur sonra giriş yapar(Kayıt olmadan diğer sayfaları göremez middleware engeller). 
   - Giriş yaptıktan sonra dashboard ekranı açılır burada kullanıcının kendi tercihlerine göre haberler gelir.ilk girişte bi tercihi olmadığı için default değerler ile gelir.
