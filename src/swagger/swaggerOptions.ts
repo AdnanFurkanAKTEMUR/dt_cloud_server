@@ -7,9 +7,9 @@ export const swaggerOptions: Options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'My API',
+      title: 'Dt cloud',
       version: '1.0.0',
-      description: 'Express + TypeScript + Swagger örneği',
+      description: 'backend api',
     },
     servers: [
       {
